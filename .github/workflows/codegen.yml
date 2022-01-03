@@ -24,6 +24,9 @@ jobs:
         with:
           args: |
             generate --lang go --input-spec swagger_domains.json --http-user-agent 'Godaddy-Client/golang'
+      - name: check md5 swagger file
+        run: |
+          chmod -R 777 *
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
