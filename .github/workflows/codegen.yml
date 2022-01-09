@@ -20,7 +20,7 @@ jobs:
       - name: check md5 swagger file
         run: |
 
-          if [[ -f swagger_domains.json.md5 && $(cat swagger_domains.json.md5) == $(md5sum swagger_domains.json | awk '{print $1}') ]]; then echo "Swagger File is unchanged; exit 0" ; else md5sum swagger_domains.json | awk '{print $1}' > swagger_domains.json.md5 ; fi
+          if [[ -f swagger_domains.json.md5 && $(cat swagger_domains.json.md5) == $(md5sum swagger_domains.json | awk '{print $1}') ]]; then echo "Swagger File is unchanged; exit 1" ; else md5sum swagger_domains.json | awk '{print $1}' > swagger_domains.json.md5 ; fi
       - name: Swagger Codegen v3
         uses: ducksify/swagger-codegen-action@v3.0
         with:
