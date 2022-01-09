@@ -2,6 +2,8 @@
 name: build on push dev
 
 on:
+  schedule:
+    - cron:  '44 4 * * *'
   push:
     branches:
       - "main"
