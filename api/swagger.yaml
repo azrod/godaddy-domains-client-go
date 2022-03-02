@@ -7765,6 +7765,10 @@ components:
         privacy:
           type: boolean
           description: Whether or not the domain has privacy protection
+        registrarCreatedAt:
+          type: string
+          description: Date and time when this domain was created by the registrar
+          format: iso-datetime
         renewAuto:
           type: boolean
           description: Whether or not the domain is configured to automatically renew
@@ -7832,6 +7836,7 @@ components:
           domainName:
             status: APPROVED
         domainId: 0.8008281904610115
+        registrarCreatedAt: registrarCreatedAt
         contactBilling: null
         createdAt: 2000-01-23T04:56:07.000+00:00
         contactAdmin:
@@ -7944,6 +7949,10 @@ components:
         privacy:
           type: boolean
           description: Whether or not the domain has privacy protection
+        registrarCreatedAt:
+          type: string
+          description: Date and time when this domain was created by the registrar
+          format: iso-datetime
         renewAuto:
           type: boolean
           description: Whether or not the domain is configured to automatically renew
@@ -8134,6 +8143,7 @@ components:
         registryStatusCodes:
         - ADD_PERIOD
         - ADD_PERIOD
+        registrarCreatedAt: registrarCreatedAt
         deletedAt: deletedAt
         domain: domain
         actions:
@@ -8611,6 +8621,10 @@ components:
         privacy:
           type: boolean
           description: Whether or not the domain has privacy protection
+        registrarCreatedAt:
+          type: string
+          description: Date and time when this domain was created by the registrar
+          format: iso-datetime
         renewAuto:
           type: boolean
           description: Whether or not the domain is configured to automatically renew
@@ -8670,6 +8684,7 @@ components:
         - nameServers
         - nameServers
         domainId: 0.8008281904610115
+        registrarCreatedAt: registrarCreatedAt
         contactBilling: null
         createdAt: 2000-01-23T04:56:07.000+00:00
         contactAdmin:
