@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **HoldRegistrar** | **bool** | Whether or not the domain is on-hold by the registrar | [default to null]
 **Locked** | **bool** | Whether or not the domain is locked to prevent transfers | [default to null]
 **Privacy** | **bool** | Whether or not the domain has privacy protection | [default to null]
-**RegistrarCreatedAt** | **string** | Date and time when this domain was created by the registrar | [optional] [default to null]
 **RenewAuto** | **bool** | Whether or not the domain is configured to automatically renew | [default to null]
 **RenewDeadline** | **string** | Date the domain must renew on | [default to null]
 **TransferProtected** | **bool** | Whether or not the domain is protected from transfer | [default to null]

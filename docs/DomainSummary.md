@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **Locked** | **bool** | Whether or not the domain is locked to prevent transfers | [default to null]
 **NameServers** | **[]string** | Fully-qualified domain names for DNS servers | [optional] [default to null]
 **Privacy** | **bool** | Whether or not the domain has privacy protection | [default to null]
-**RegistrarCreatedAt** | **string** | Date and time when this domain was created by the registrar | [optional] [default to null]
 **RenewAuto** | **bool** | Whether or not the domain is configured to automatically renew | [default to null]
 **RenewDeadline** | [**time.Time**](time.Time.md) | Date the domain must renew on | [default to null]
 **Renewable** | **bool** | Whether or not the domain is eligble for renewal based on status | [optional] [default to null]

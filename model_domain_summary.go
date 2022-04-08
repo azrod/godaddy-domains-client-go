@@ -37,8 +37,6 @@ type DomainSummary struct {
 	NameServers []string `json:"nameServers,omitempty"`
 	// Whether or not the domain has privacy protection
 	Privacy bool `json:"privacy"`
-	// Date and time when this domain was created by the registrar
-	RegistrarCreatedAt string `json:"registrarCreatedAt,omitempty"`
 	// Whether or not the domain is configured to automatically renew
 	RenewAuto bool `json:"renewAuto"`
 	// Date the domain must renew on
