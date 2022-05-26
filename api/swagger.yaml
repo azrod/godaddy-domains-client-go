@@ -1650,9 +1650,10 @@ paths:
           type: string
       - name: country
         in: query
-        description: "Two-letter ISO country code to be used as a hint for target\
-          \ region<br/><br/>\nNOTE: These are sample values, there are many\n<a href=\"\
-          http://www.iso.org/iso/country_codes.htm\">more</a>"
+        description: |-
+          Two-letter ISO country code to be used as a hint for target region<br/><br/>
+          NOTE: These are sample values, there are many
+          <a href="http://www.iso.org/iso/country_codes.htm">more</a>
         required: false
         style: form
         explode: true
@@ -1939,9 +1940,10 @@ paths:
             - premium
       - name: tlds
         in: query
-        description: "Top-level domains to be included in suggestions<br/><br/>\n\
-          NOTE: These are sample values, there are many\n<a href=\"http://www.godaddy.com/tlds/gtld.aspx#domain_search_form\"\
-          >more</a>"
+        description: |-
+          Top-level domains to be included in suggestions<br/><br/>
+          NOTE: These are sample values, there are many
+          <a href="http://www.godaddy.com/tlds/gtld.aspx#domain_search_form">more</a>
         required: false
         style: form
         explode: false
@@ -1975,8 +1977,9 @@ paths:
           type: integer
       - name: waitMs
         in: query
-        description: "Maximum amount of time, in milliseconds, to wait for responses\n\
-          If elapses, return the results compiled up to that point"
+        description: |-
+          Maximum amount of time, in milliseconds, to wait for responses
+          If elapses, return the results compiled up to that point
         required: false
         style: form
         explode: true
@@ -6898,9 +6901,10 @@ components:
           format: city-name
         country:
           type: string
-          description: "Two-letter ISO country code to be used as a hint for target\
-            \ region<br/><br/>\nNOTE: These are sample values, there are many\n<a\
-            \ href='http://www.iso.org/iso/country_codes.htm'>more</a>"
+          description: |-
+            Two-letter ISO country code to be used as a hint for target region<br/><br/>
+            NOTE: These are sample values, there are many
+            <a href='http://www.iso.org/iso/country_codes.htm'>more</a>
           format: iso-country-code
           default: US
           enum:
@@ -7584,11 +7588,12 @@ components:
           description: "Human-readable, English description of the error"
         path:
           type: string
-          description: "<ul>\n<li style='margin-left: 12px;'>JSONPath referring to\
-            \ a field containing an error</li>\n<strong style='margin-left: 12px;'>OR</strong>\n\
-            <li style='margin-left: 12px;'>JSONPath referring to a field that refers\
-            \ to an object containing an error, with more detail in `pathRelated`</li>\n\
-            </ul>"
+          description: |-
+            <ul>
+            <li style='margin-left: 12px;'>JSONPath referring to a field containing an error</li>
+            <strong style='margin-left: 12px;'>OR</strong>
+            <li style='margin-left: 12px;'>JSONPath referring to a field that refers to an object containing an error, with more detail in `pathRelated`</li>
+            </ul>
           format: json-path
         status:
           type: integer
@@ -7765,6 +7770,10 @@ components:
         privacy:
           type: boolean
           description: Whether or not the domain has privacy protection
+        registrarCreatedAt:
+          type: string
+          description: Date and time when this domain was created by the registrar
+          format: iso-datetime
         renewAuto:
           type: boolean
           description: Whether or not the domain is configured to automatically renew
@@ -7774,39 +7783,29 @@ components:
           format: date-time
         status:
           type: string
-          description: "Processing status of the domain<br/><ul>\n<li><strong style='margin-left:\
-            \ 12px;'>ACTIVE</strong> - All is well</li>\n<li><strong style='margin-left:\
-            \ 12px;'>AWAITING*</strong> - System is waiting for the end-user to complete\
-            \ an action</li>\n<li><strong style='margin-left: 12px;'>CANCELLED*</strong>\
-            \ - Domain has been cancelled, and may or may not be reclaimable</li>\n\
-            <li><strong style='margin-left: 12px;'>CONFISCATED</strong> - Domain has\
-            \ been confiscated, usually for abuse, chargeback, or fraud</li>\n<li><strong\
-            \ style='margin-left: 12px;'>DISABLED*</strong> - Domain has been disabled</li>\n\
-            <li><strong style='margin-left: 12px;'>EXCLUDED*</strong> - Domain has\
-            \ been excluded from Firehose registration</li>\n<li><strong style='margin-left:\
-            \ 12px;'>EXPIRED*</strong> - Domain has expired</li>\n<li><strong style='margin-left:\
-            \ 12px;'>FAILED*</strong> - Domain has failed a required action, and the\
-            \ system is no longer retrying</li>\n<li><strong style='margin-left: 12px;'>HELD*</strong>\
-            \ - Domain has been placed on hold, and likely requires intervention from\
-            \ Support</li>\n<li><strong style='margin-left: 12px;'>LOCKED*</strong>\
-            \ - Domain has been locked, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>PARKED*</strong> - Domain has been\
-            \ parked, and likely requires intervention from Support</li>\n<li><strong\
-            \ style='margin-left: 12px;'>PENDING*</strong> - Domain is working its\
-            \ way through an automated workflow</li>\n<li><strong style='margin-left:\
-            \ 12px;'>RESERVED*</strong> - Domain is reserved, and likely requires\
-            \ intervention from Support</li>\n<li><strong style='margin-left: 12px;'>REVERTED</strong>\
-            \ - Domain has been reverted, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>SUSPENDED*</strong> - Domain has\
-            \ been suspended, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>TRANSFERRED*</strong> - Domain\
-            \ has been transferred out</li>\n<li><strong style='margin-left: 12px;'>UNKNOWN</strong>\
-            \ - Domain is in an unknown state</li>\n<li><strong style='margin-left:\
-            \ 12px;'>UNLOCKED*</strong> - Domain has been unlocked, and likely requires\
-            \ intervention from Support</li>\n<li><strong style='margin-left: 12px;'>UNPARKED*</strong>\
-            \ - Domain has been unparked, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>UPDATED*</strong> - Domain ownership\
-            \ has been transferred to another account</li>\n</ul>"
+          description: |-
+            Processing status of the domain<br/><ul>
+            <li><strong style='margin-left: 12px;'>ACTIVE</strong> - All is well</li>
+            <li><strong style='margin-left: 12px;'>AWAITING*</strong> - System is waiting for the end-user to complete an action</li>
+            <li><strong style='margin-left: 12px;'>CANCELLED*</strong> - Domain has been cancelled, and may or may not be reclaimable</li>
+            <li><strong style='margin-left: 12px;'>CONFISCATED</strong> - Domain has been confiscated, usually for abuse, chargeback, or fraud</li>
+            <li><strong style='margin-left: 12px;'>DISABLED*</strong> - Domain has been disabled</li>
+            <li><strong style='margin-left: 12px;'>EXCLUDED*</strong> - Domain has been excluded from Firehose registration</li>
+            <li><strong style='margin-left: 12px;'>EXPIRED*</strong> - Domain has expired</li>
+            <li><strong style='margin-left: 12px;'>FAILED*</strong> - Domain has failed a required action, and the system is no longer retrying</li>
+            <li><strong style='margin-left: 12px;'>HELD*</strong> - Domain has been placed on hold, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>LOCKED*</strong> - Domain has been locked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>PARKED*</strong> - Domain has been parked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>PENDING*</strong> - Domain is working its way through an automated workflow</li>
+            <li><strong style='margin-left: 12px;'>RESERVED*</strong> - Domain is reserved, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>REVERTED</strong> - Domain has been reverted, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>SUSPENDED*</strong> - Domain has been suspended, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>TRANSFERRED*</strong> - Domain has been transferred out</li>
+            <li><strong style='margin-left: 12px;'>UNKNOWN</strong> - Domain is in an unknown state</li>
+            <li><strong style='margin-left: 12px;'>UNLOCKED*</strong> - Domain has been unlocked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>UNPARKED*</strong> - Domain has been unparked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>UPDATED*</strong> - Domain ownership has been transferred to another account</li>
+            </ul>
         subaccountId:
           type: string
           description: Reseller subaccount shopperid who can manage the domain
@@ -7832,6 +7831,7 @@ components:
           domainName:
             status: APPROVED
         domainId: 0.8008281904610115
+        registrarCreatedAt: registrarCreatedAt
         contactBilling: null
         createdAt: 2000-01-23T04:56:07.000+00:00
         contactAdmin:
@@ -7944,6 +7944,10 @@ components:
         privacy:
           type: boolean
           description: Whether or not the domain has privacy protection
+        registrarCreatedAt:
+          type: string
+          description: Date and time when this domain was created by the registrar
+          format: iso-datetime
         renewAuto:
           type: boolean
           description: Whether or not the domain is configured to automatically renew
@@ -8134,6 +8138,7 @@ components:
         registryStatusCodes:
         - ADD_PERIOD
         - ADD_PERIOD
+        registrarCreatedAt: registrarCreatedAt
         deletedAt: deletedAt
         domain: domain
         actions:
@@ -8508,7 +8513,7 @@ components:
         orderId:
           type: integer
           description: Unique identifier of the order processed to purchase the domain
-          format: integer-positive
+          format: int64
         total:
           type: integer
           description: Total cost of the domain and any selected add-ons
@@ -8611,6 +8616,10 @@ components:
         privacy:
           type: boolean
           description: Whether or not the domain has privacy protection
+        registrarCreatedAt:
+          type: string
+          description: Date and time when this domain was created by the registrar
+          format: iso-datetime
         renewAuto:
           type: boolean
           description: Whether or not the domain is configured to automatically renew
@@ -8623,39 +8632,29 @@ components:
           description: Whether or not the domain is eligble for renewal based on status
         status:
           type: string
-          description: "Processing status of the domain<br/><ul>\n<li><strong style='margin-left:\
-            \ 12px;'>ACTIVE</strong> - All is well</li>\n<li><strong style='margin-left:\
-            \ 12px;'>AWAITING*</strong> - System is waiting for the end-user to complete\
-            \ an action</li>\n<li><strong style='margin-left: 12px;'>CANCELLED*</strong>\
-            \ - Domain has been cancelled, and may or may not be reclaimable</li>\n\
-            <li><strong style='margin-left: 12px;'>CONFISCATED</strong> - Domain has\
-            \ been confiscated, usually for abuse, chargeback, or fraud</li>\n<li><strong\
-            \ style='margin-left: 12px;'>DISABLED*</strong> - Domain has been disabled</li>\n\
-            <li><strong style='margin-left: 12px;'>EXCLUDED*</strong> - Domain has\
-            \ been excluded from Firehose registration</li>\n<li><strong style='margin-left:\
-            \ 12px;'>EXPIRED*</strong> - Domain has expired</li>\n<li><strong style='margin-left:\
-            \ 12px;'>FAILED*</strong> - Domain has failed a required action, and the\
-            \ system is no longer retrying</li>\n<li><strong style='margin-left: 12px;'>HELD*</strong>\
-            \ - Domain has been placed on hold, and likely requires intervention from\
-            \ Support</li>\n<li><strong style='margin-left: 12px;'>LOCKED*</strong>\
-            \ - Domain has been locked, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>PARKED*</strong> - Domain has been\
-            \ parked, and likely requires intervention from Support</li>\n<li><strong\
-            \ style='margin-left: 12px;'>PENDING*</strong> - Domain is working its\
-            \ way through an automated workflow</li>\n<li><strong style='margin-left:\
-            \ 12px;'>RESERVED*</strong> - Domain is reserved, and likely requires\
-            \ intervention from Support</li>\n<li><strong style='margin-left: 12px;'>REVERTED</strong>\
-            \ - Domain has been reverted, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>SUSPENDED*</strong> - Domain has\
-            \ been suspended, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>TRANSFERRED*</strong> - Domain\
-            \ has been transferred out</li>\n<li><strong style='margin-left: 12px;'>UNKNOWN</strong>\
-            \ - Domain is in an unknown state</li>\n<li><strong style='margin-left:\
-            \ 12px;'>UNLOCKED*</strong> - Domain has been unlocked, and likely requires\
-            \ intervention from Support</li>\n<li><strong style='margin-left: 12px;'>UNPARKED*</strong>\
-            \ - Domain has been unparked, and likely requires intervention from Support</li>\n\
-            <li><strong style='margin-left: 12px;'>UPDATED*</strong> - Domain ownership\
-            \ has been transferred to another account</li>\n</ul>"
+          description: |-
+            Processing status of the domain<br/><ul>
+            <li><strong style='margin-left: 12px;'>ACTIVE</strong> - All is well</li>
+            <li><strong style='margin-left: 12px;'>AWAITING*</strong> - System is waiting for the end-user to complete an action</li>
+            <li><strong style='margin-left: 12px;'>CANCELLED*</strong> - Domain has been cancelled, and may or may not be reclaimable</li>
+            <li><strong style='margin-left: 12px;'>CONFISCATED</strong> - Domain has been confiscated, usually for abuse, chargeback, or fraud</li>
+            <li><strong style='margin-left: 12px;'>DISABLED*</strong> - Domain has been disabled</li>
+            <li><strong style='margin-left: 12px;'>EXCLUDED*</strong> - Domain has been excluded from Firehose registration</li>
+            <li><strong style='margin-left: 12px;'>EXPIRED*</strong> - Domain has expired</li>
+            <li><strong style='margin-left: 12px;'>FAILED*</strong> - Domain has failed a required action, and the system is no longer retrying</li>
+            <li><strong style='margin-left: 12px;'>HELD*</strong> - Domain has been placed on hold, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>LOCKED*</strong> - Domain has been locked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>PARKED*</strong> - Domain has been parked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>PENDING*</strong> - Domain is working its way through an automated workflow</li>
+            <li><strong style='margin-left: 12px;'>RESERVED*</strong> - Domain is reserved, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>REVERTED</strong> - Domain has been reverted, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>SUSPENDED*</strong> - Domain has been suspended, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>TRANSFERRED*</strong> - Domain has been transferred out</li>
+            <li><strong style='margin-left: 12px;'>UNKNOWN</strong> - Domain is in an unknown state</li>
+            <li><strong style='margin-left: 12px;'>UNLOCKED*</strong> - Domain has been unlocked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>UNPARKED*</strong> - Domain has been unparked, and likely requires intervention from Support</li>
+            <li><strong style='margin-left: 12px;'>UPDATED*</strong> - Domain ownership has been transferred to another account</li>
+            </ul>
         transferProtected:
           type: boolean
           description: Whether or not the domain is protected from transfer
@@ -8670,6 +8669,7 @@ components:
         - nameServers
         - nameServers
         domainId: 0.8008281904610115
+        registrarCreatedAt: registrarCreatedAt
         contactBilling: null
         createdAt: 2000-01-23T04:56:07.000+00:00
         contactAdmin:
@@ -8965,11 +8965,12 @@ components:
             \ contents of the field"
         path:
           type: string
-          description: "<ul>\n<li style='margin-left: 12px;'>JSONPath referring to\
-            \ a field containing an error</li>\n<strong style='margin-left: 12px;'>OR</strong>\n\
-            <li style='margin-left: 12px;'>JSONPath referring to a field that refers\
-            \ to an object containing an error, with more detail in `pathRelated`</li>\n\
-            </ul>"
+          description: |-
+            <ul>
+            <li style='margin-left: 12px;'>JSONPath referring to a field containing an error</li>
+            <strong style='margin-left: 12px;'>OR</strong>
+            <li style='margin-left: 12px;'>JSONPath referring to a field that refers to an object containing an error, with more detail in `pathRelated`</li>
+            </ul>
           format: json-path
         pathRelated:
           type: string

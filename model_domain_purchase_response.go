@@ -9,7 +9,7 @@ type DomainPurchaseResponse struct {
 	// Number items included in the order
 	ItemCount int32 `json:"itemCount"`
 	// Unique identifier of the order processed to purchase the domain
-	OrderId int32 `json:"orderId"`
+	OrderId int64 `json:"orderId"`
 	// Total cost of the domain and any selected add-ons
 	Total int32 `json:"total"`
 }

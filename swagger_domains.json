@@ -5539,6 +5539,11 @@
           "description": "Whether or not the domain has privacy protection",
           "type": "boolean"
         },
+        "registrarCreatedAt": {
+          "type": "string",
+          "format": "iso-datetime",
+          "description": "Date and time when this domain was created by the registrar"
+        },
         "renewAuto": {
           "description": "Whether or not the domain is configured to automatically renew",
           "type": "boolean"
@@ -5641,6 +5646,11 @@
         "privacy": {
           "type": "boolean",
           "description": "Whether or not the domain has privacy protection"
+        },
+        "registrarCreatedAt": {
+          "type": "string",
+          "format": "iso-datetime",
+          "description": "Date and time when this domain was created by the registrar"
         },
         "renewAuto": {
           "type": "boolean",
@@ -6063,7 +6073,7 @@
         },
         "orderId": {
           "description": "Unique identifier of the order processed to purchase the domain",
-          "format": "integer-positive",
+          "format": "int64",
           "type": "integer"
         },
         "total": {
@@ -6178,6 +6188,11 @@
         "privacy": {
           "description": "Whether or not the domain has privacy protection",
           "type": "boolean"
+        },
+        "registrarCreatedAt": {
+          "type": "string",
+          "format": "iso-datetime",
+          "description": "Date and time when this domain was created by the registrar"
         },
         "renewAuto": {
           "description": "Whether or not the domain is configured to automatically renew",
