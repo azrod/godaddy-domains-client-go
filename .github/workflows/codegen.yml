@@ -3,7 +3,7 @@ name: build on push dev
 
 on:
   schedule:
-    - cron:  '44 4 * * *'
+    - cron: "44 4 * * *"
   push:
     branches:
       - "main"
@@ -22,7 +22,7 @@ jobs:
 
           if [[ -f swagger_domains.json.md5 && $(cat swagger_domains.json.md5) == $(md5sum swagger_domains.json | awk '{print $1}') ]]; then echo "Swagger File is unchanged; exit 1" ; else md5sum swagger_domains.json | awk '{print $1}' > swagger_domains.json.md5 ; fi
       - name: Swagger Codegen v3
-        uses: ducksify/swagger-codegen-action@v3.0
+        uses: bjerkio/swagger-codegen-action@v1
         with:
           args: |
             generate --lang go --input-spec swagger_domains.json --http-user-agent 'Godaddy-Client/golang'
